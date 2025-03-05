@@ -1,0 +1,21 @@
+# This YAML file defines project-specific parameters such as project details, 
+# storage configuration (bucket and HDFS paths), and security settings.
+# Update the placeholders with your actual configuration values.
+
+project:
+  name: "Big Data Integration for Energy Distribution Client Data"
+  description: "Integrate and consolidate client-related data from Oracle (OPERA system) into a final Hive table on Cloudera Data Platform."
+
+orchestration:
+  # Example cron schedule for daily data load at 2 AM
+  schedule: "0 2 * * *"
+
+storage:
+  bucket_s3a: "your_bucket_name"
+  hdfs_base_path: "s3a://your_bucket_name/warehouse/tablespace/managed/hive"
+  country_system: "co_opera"
+  hive_database: "co_opera"
+  hive_final_table: "dominio_cliente"
+
+security:
+  ranger_policy_file: "config/ranger_policies.xml"
