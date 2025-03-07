@@ -13,8 +13,8 @@ orchestration:
 storage:
   bucket_s3a: "your_bucket_name"
   hdfs_base_path: "s3a://your_bucket_name/warehouse/tablespace/managed/hive"
-  country_system: "co_opera"
-  hive_database: "co_opera"
+  staging_db: "co_opera"
+  hive_database: "co_perdidas"
   hive_final_table: "dominio_cliente"
 
 security:
